@@ -1,0 +1,23 @@
+--Create an Electronics Store database
+
+CREATE TABLE StoreProducts (id INTEGER PRIMARY KEY, name Text, quantity INTEGER, Rating INTEGER, Price Integer, Refurbished TEXT, New TEXT , SOLD INTEGER);
+
+INSERT INTO StoreProducts VALUES (1, "PS5", 3, 5, 469, "NO", "YES", 3);
+
+INSERT INTO StoreProducts VALUES (2, "Iphone 14", 10, 4, 799, "NO" , "YES", 10);
+
+INSERT INTO StoreProducts VALUES (3, "Gaming Monitors", 5,3, 130, "YES", "NO", 4);
+
+INSERT INTO StoreProducts VALUES (4, "Astro A40 Headphones", 30, 4, 210, "YES", "NO", 24);
+
+INSERT INTO StoreProducts VALUES (5, "Canon Powershot G7X Mark II", 12, 3, 629, "NO", "YES", 4);
+
+INSERT INTO StoreProducts VALUES (6, "HDMI Cable", 7, 2, 12, "NO", "YES", 3);
+
+INSERT INTO StoreProducts VALUES (7, "LG C2 TV", 4, 5, 2800, "NO", "YES", 4);
+
+--Display the entire store products
+SELECT * FROM StoreProducts;
+
+--Display the store products in descending order by price
+SELECT * FROM StoreProducts where Price >11 order by Price
