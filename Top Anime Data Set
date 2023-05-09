@@ -1,0 +1,91 @@
+# Top Anime/Manga: Title, Rank, Animation Studio, Year Created, Anime Or Manga,
+Naruto ,#1, Pierrot, 1999, Anime
+Bleach, #2, Pierrot, 2004, Anime
+ Attack on Titan, #3, Wit Studio and Mappa, 2013, Anime
+ Dragon Ball Z, #4, Toei, 1989, Anime
+ Blue Lock, #7, Eight Bit, 2022, Anime 
+ Solo Leveling, #5, None, 2016, Manga
+ Hajime No Ippo, #6, MadHouse, 2000, Anime
+ Chainsaw Man, #8, Mappa, 2022, Anime
+ Kaiju No. 8, #10, None, 2020, Manga
+ Jujutsu Kaisen, #7, Mappa, 2020, Anime
+ Kaiji, #9, Madhouse, 2007, Anime
+ One Piece, #11, Toei, 1999, Anime
+ Demon Slayer, #12, Ufotable, 2019, Anime
+ Overgeared,#16, NONE, 2014, Manga
+ Vinland Saga, #15, Wit Studio, 2019, Anime
+ Hell's Paradise, #17, Mappa, 2023, Anime
+ Fire Punch
+ Jojo's Bizarre Adventure, #14, David Production, 1993, Anime
+ Fate, #13, Ufotable, 2006, Anime
+ Black Clover, #18, Pierrot, 2017, Anime
+ Death Note, #19, MadHouse, 2006, Anime
+ Fire Force, #20, David Production, 2015, Anime
+ 
+ CREATE TABLE TopAnime_Manga(
+ title TEXT,
+ Rank Integer,
+ Studio TEXT,
+ Year Integer,
+ Anime TEXT,
+ Manga TEXT);
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Naruto", 1, "Pierrot", 1999, "YES",'NO');
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Bleach", 2, "Pierrot", 2004, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Attack on Titan", 3, "Wit Studio and Mappa", 2013, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Dragon Ball Z", 4, "Toei", 1989, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Solo Leveling", 5, "NONE", 2016, "NO", "YES");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Hajime No Ippo", 6, "MadHouse", 2000, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Jujustu Kaisen", 7, "Mappa", 2020, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Chainsaw Man", 8, "Mappa", 2020, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Kaiji", 9, "MadHouse", 2007, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Kaiju No.8", 10, "NONE", 2020, "NO", "YES");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("One Piece", 11, "Toei", 1999, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Demon Slayer", 12, "Ufotable", 2019, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Fate", 13,"Ufotable" ,2006, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Jojo's Bizarre Adventure", 14, "David Production", 1993, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Vinland Saga", 15, "Wit Studio", 2019, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Overgeared", 16, "NONE", 2014, "NO", "YES");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Hell's Paradise", 17, "Mappa", 2023, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Black Clover", 18, "Pierrot", 2017, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Death Note", 19, "MadHouse", 2006, "YES", "NO");
+ 
+ INSERT INTO TopAnime_Manga VALUES ("Fire Forece", 20, "David Production", 2015, "YES", "NO");
+ 
+ SELECT * FROM TopAnime_Manga;
+ 
+ SELECT AVG(Year) FROM TopAnime_Manga;
+ 
+SELECT COUNT(Studio) FROM TopAnime_Manga;
+
+SELECT COUNT(Studio),
+    CASE
+    
+        WHEN Rank > 15 THEN "C Tier"
+        WHEN Rank > 10 THEN "B Tier"
+        WHEN Rank > 5  THEN "A Tier"
+        WHEN Rank <= 5  THEN "S Tier"
+        
+END AS "Tier_List"
+FROM TopAnime_Manga
+GROUP BY Tier_List;
+
+SELECT title FROM TopAnime_Manga where Studio = "Mappa" AND Year > 2017;
