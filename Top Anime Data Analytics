@@ -1,26 +1,4 @@
-# Top Anime/Manga: Title, Rank, Animation Studio, Year Created, Anime Or Manga,
-Naruto ,#1, Pierrot, 1999, Anime
-Bleach, #2, Pierrot, 2004, Anime
- Attack on Titan, #3, Wit Studio and Mappa, 2013, Anime
- Dragon Ball Z, #4, Toei, 1989, Anime
- Blue Lock, #7, Eight Bit, 2022, Anime 
- Solo Leveling, #5, None, 2016, Manga
- Hajime No Ippo, #6, MadHouse, 2000, Anime
- Chainsaw Man, #8, Mappa, 2022, Anime
- Kaiju No. 8, #10, None, 2020, Manga
- Jujutsu Kaisen, #7, Mappa, 2020, Anime
- Kaiji, #9, Madhouse, 2007, Anime
- One Piece, #11, Toei, 1999, Anime
- Demon Slayer, #12, Ufotable, 2019, Anime
- Overgeared,#16, NONE, 2014, Manga
- Vinland Saga, #15, Wit Studio, 2019, Anime
- Hell's Paradise, #17, Mappa, 2023, Anime
- Fire Punch
- Jojo's Bizarre Adventure, #14, David Production, 1993, Anime
- Fate, #13, Ufotable, 2006, Anime
- Black Clover, #18, Pierrot, 2017, Anime
- Death Note, #19, MadHouse, 2006, Anime
- Fire Force, #20, David Production, 2015, Anime
+# List Top Anime/Manga including Title, Rank, Animation Studio, Year Created, Anime Or Manga
  
  CREATE TABLE TopAnime_Manga(
  title TEXT,
